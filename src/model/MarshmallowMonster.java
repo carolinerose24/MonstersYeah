@@ -2,7 +2,7 @@ package model;
 
 public class MarshmallowMonster
 {
-	//-----------Data members section-----------------------------(always private)
+	//-----------Data members section-----------------------------(always private)---but can be changed with getters/setters--------
 	private String name; //default null (objects)
 	private double legCount; //default Zero (numbers)
 	private int eyeCount;
@@ -91,9 +91,9 @@ public class MarshmallowMonster
 	//any object in model should have a toString-----------------------------------------------------------------------------------------
 	public String toString()
 	{
-		String description = "My monster's name is " + name 
-				+ ". He has " + armCount + " tentacles."
-				+ " The scary thing he says is RAWR XD!";
+		String description = ""; //"My monster's name is " + name 
+		//		+ ". He has " + armCount + " tentacles."
+		//		+ " The scary thing he says is blub blub.";
 		
 		
 		return description;
