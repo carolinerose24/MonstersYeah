@@ -39,35 +39,69 @@ public class monsterController
 		System.out.println("How many eyes does your monster have?");
 		int answerEyes = anotherInputScanner.nextInt();
 		
-		System.out.println("Does your monster have a nose?");
-		String answerNoses = anotherInputScanner.nextLine();
-		boolean answerNose;
-		
-		if (answerNoses == "no")
-		{
-			boolean answerNose = false;
-		}
-		if (answerNoses == "yes")
-		{
-			boolean answerNose = true;
-		}
-
-		
 		System.out.println("How many arms does your monster have?");
 		int answerArms = anotherInputScanner.nextInt();
 		
+		System.out.println("Does your monster have a nose?");
+		String answerNoses = anotherInputScanner.nextLine();
+		
+//		System.out.println("Does your monster have a nose?");
+		String answerN = anotherInputScanner.nextLine();
+		
+	//	boolean answerNose1 = true;
+		
+
+		
+
+		
+
+		
+	
+		
+		
+		
 		System.out.println("Your monster is named " + answer + ".");
 		System.out.println("It has " + answerLegs + " legs, "
-							+ answerEyes + " eyes, and " + answerArms  + " arms.");
-		if (answerNose == false)
+						+ answerEyes + " eyes, and " + answerArms  + " arms.");
+		System.out.println("It has " + answerN + " nose.");
+
+		
+//		if (answerNose1 == false)
+//		{
+//			System.out.println("It does not have a nose.");
+//		}
+//
+//		if (answerNose1 == true)
+//		{
+//			System.out.println("It has a nose.");
+//		}
+//	
+		
+		
+		if (answerN == "yes")
 		{
-			System.out.println("It does not have a nose.");
-		}
-		if (answerNose == true)
-		{
+			boolean	answerNose1 = true;
 			System.out.println("It has a nose.");
 		}
 		
+		if (answerNoses == "yes")
+			
+		{
+			boolean	answerNose1 = true;
+			System.out.println("It has a nose.");
+		}
+		
+		if (answerNoses == "no")
+		{
+			boolean	answerNose1 = false;
+			System.out.println("It does not have a nose.");
+		}
+		
+		if (answerN == "no")			
+		{
+			boolean	answerNose1 = false;
+			System.out.println("It does not have a nose.");
+		}
 	
 
 
