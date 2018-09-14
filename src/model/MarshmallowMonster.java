@@ -91,9 +91,9 @@ public class MarshmallowMonster
 	//any object in model should have a toString-----------------------------------------------------------------------------------------
 	public String toString()
 	{
-		String description = ""; //"My monster's name is " + name 
-		//		+ ". He has " + armCount + " tentacles."
-		//		+ " The scary thing he says is blub blub.";
+		String description = " My monster's name is " + name 
+				+ ". He has " + armCount + " tentacles."
+				+ " The scary thing he says is blub blub.";
 		
 		
 		return description;
