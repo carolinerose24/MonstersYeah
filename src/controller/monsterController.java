@@ -30,7 +30,14 @@ public class monsterController
 		
 		
 		
-		
+//		JOptionPane.showMessageDialog(null, "What is the name of your monster?");
+//		JOptionPane.showMessageDialog(null, "How many legs does your monster have?");
+//		JOptionPane.showMessageDialog(null, "How many eyes does your monster have?");
+//		JOptionPane.showMessageDialog(null, "How many arms does your monster have?");
+//		JOptionPane.showMessageDialog(null, "Does your monster have a nose?");
+//		
+//		String userMonsterName = 	JOptionPane.showInputDialog(null, "What is the name of your monster?");
+		//variable + jop + null, question for input (comment for output)
 		
 		
 		
@@ -46,23 +53,23 @@ public class monsterController
 		Scanner anotherInputScanner;
 		anotherInputScanner = new Scanner(System.in);
 		
-		JOptionPane.showMessageDialog(null, "What is the name of your monster?");
+//		JOptionPane.showMessageDialog(null, "What is the name of your monster?");
 		System.out.println("What is the name of your monster?");
 		String answer = anotherInputScanner.nextLine();
 		
-		JOptionPane.showMessageDialog(null, "How many legs does your monster have?");
+//		JOptionPane.showMessageDialog(null, "How many legs does your monster have?");
 		System.out.println("How many legs does your monster have?");
 		double answerLegs = anotherInputScanner.nextDouble();
 		
-		JOptionPane.showMessageDialog(null, "How many eyes does your monster have?");
+//		JOptionPane.showMessageDialog(null, "How many eyes does your monster have?");
 		System.out.println("How many eyes does your monster have?");
 		int answerEyes = anotherInputScanner.nextInt();
 		
-		JOptionPane.showMessageDialog(null, "How many arms does your monster have?");
+//		JOptionPane.showMessageDialog(null, "How many arms does your monster have?");
 		System.out.println("How many arms does your monster have?");
 		int answerArms = anotherInputScanner.nextInt();
 		
-		JOptionPane.showMessageDialog(null, "Does your monster have a nose?");
+//		JOptionPane.showMessageDialog(null, "Does your monster have a nose?");
 		System.out.println("Does your monster have a nose?");
 		String answerNoses = anotherInputScanner.nextLine();
 		
@@ -74,17 +81,21 @@ public class monsterController
 		
 		System.out.println("How many noses?");
 		int answerHowMany = anotherInputScanner.nextInt();
-		
-
 		//if no noses, assume Zero. if yes, ask how many noses?
 	
 		
+	
 		
 		
 		System.out.println("Your monster is named " + answer + ".");
 		System.out.println("It has " + answerLegs + " legs, "
 						+ answerEyes + " eyes, and " + answerArms  + " arms.");
 		System.out.println("It has " + answerNoses + " noses.");
+		
+//		JOptionPane.showMessageDialog(null, "Your monster is named " + answer + ".");
+//		JOptionPane.showMessageDialog(null, "It has " + answerLegs + " legs, "
+//				+ answerEyes + " eyes, and " + answerArms  + " arms.");
+//		JOptionPane.showMessageDialog(null, "It has " + answerNoses + " noses.");
 
 		
 //		if (answerNose1 == false)
@@ -141,6 +152,44 @@ public class monsterController
 //		userMonster.setArmCount = answerInputScanner.nextInt;
 		
 	}
+
+	
+	public boolean validInt(String maybeInt)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Integer.parseInt(maybeInt);
+			isValid = true;
+		}
+		catch(NumberFormatException error) //type, variable -- formal parameter
+		{
+			JOptionPane.showMessageDialog(null, "Put in an integer");
+		}
+		
+		
+		return isValid;
+	}
+	
+	
+	public boolean validDouble(String maybeDouble)
+	{
+		boolean isValid = false;
+		try
+		{
+			Double.parseDouble(maybeDouble); //String to double conversion
+			isValid=true;
+		}
+		catch(NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "Put in an double");
+		}
+		return isValid;
+	}
+	
+	
+	
 	
 //	public void monsterInput()
 //	{
