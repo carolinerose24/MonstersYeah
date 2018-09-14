@@ -25,21 +25,41 @@ public class monsterController
 		JOptionPane.showMessageDialog(null,"put your \n text here"); //void because it does not return anything--only further input is the OKAY button
 		//use this method instead of System.out.Println("ASDF");
 		
-		JOptionPane.showMessageDialog(null, myMonster);
+//		JOptionPane.showMessageDialog(null, myMonster);
 		//-------------------if you want it to be on multiple lines, but \n where the break should be------------------
 		
 		
 		
-//		JOptionPane.showMessageDialog(null, "What is the name of your monster?");
-//		JOptionPane.showMessageDialog(null, "How many legs does your monster have?");
-//		JOptionPane.showMessageDialog(null, "How many eyes does your monster have?");
-//		JOptionPane.showMessageDialog(null, "How many arms does your monster have?");
-//		JOptionPane.showMessageDialog(null, "Does your monster have a nose?");
-//		
+		String nameOfMonster= JOptionPane.showInputDialog(null, "What is the name of your monster?");
+		String userLegCount = JOptionPane.showInputDialog(null, "How many legs does your monster have?");
+		String userEyeCount = JOptionPane.showInputDialog(null, "How many eyes does your monster have?");
+		String userArmCount = JOptionPane.showInputDialog(null, "How many arms does your monster have?");
+		String userNose = JOptionPane.showInputDialog(null, "Does your monster have a nose?");
+		String userNose111 = "yes";
+		if (userNose.equals(userNose111))
+		{
+			String userNose2 = JOptionPane.showInputDialog(null, "How many noses?");
+
+			JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + ".");
+			JOptionPane.showMessageDialog(null, "It has " + userLegCount + " legs, "
+					+ userEyeCount + " eyes, and " + userArmCount  + " arms.");
+			JOptionPane.showMessageDialog(null, "It has " + userNose2 + " noses.");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + ".");
+			JOptionPane.showMessageDialog(null, "It has " + userLegCount + " legs, "
+					+ userEyeCount + " eyes, and " + userArmCount  + " arms.");
+			JOptionPane.showMessageDialog(null, "It does not have a nose.");
+		}
+
+		
+		
+		
+		
+		
 //		String userMonsterName = 	JOptionPane.showInputDialog(null, "What is the name of your monster?");
 		//variable + jop + null, question for input (comment for output)
-		
-		
 		
 		
 		System.out.println(myMonster);
@@ -53,23 +73,23 @@ public class monsterController
 		Scanner anotherInputScanner;
 		anotherInputScanner = new Scanner(System.in);
 		
-//		JOptionPane.showMessageDialog(null, "What is the name of your monster?");
+//		String nameOfMonster= JOptionPane.showInputDialog(null, "What is the name of your monster?");
 		System.out.println("What is the name of your monster?");
 		String answer = anotherInputScanner.nextLine();
 		
-//		JOptionPane.showMessageDialog(null, "How many legs does your monster have?");
+//		String userLegCount = JOptionPane.showInputDialog(null, "How many legs does your monster have?");
 		System.out.println("How many legs does your monster have?");
 		double answerLegs = anotherInputScanner.nextDouble();
 		
-//		JOptionPane.showMessageDialog(null, "How many eyes does your monster have?");
+//		String userEyeCount = JOptionPane.showInputDialog(null, "How many eyes does your monster have?");
 		System.out.println("How many eyes does your monster have?");
 		int answerEyes = anotherInputScanner.nextInt();
 		
-//		JOptionPane.showMessageDialog(null, "How many arms does your monster have?");
+//		String userArmCount = JOptionPane.showInputDialog(null, "How many arms does your monster have?");
 		System.out.println("How many arms does your monster have?");
 		int answerArms = anotherInputScanner.nextInt();
 		
-//		JOptionPane.showMessageDialog(null, "Does your monster have a nose?");
+//		String userNoseym = JOptionPane.showInputDialog(null, "Does your monster have a nose?");
 		System.out.println("Does your monster have a nose?");
 		String answerNoses = anotherInputScanner.nextLine();
 		
@@ -92,10 +112,10 @@ public class monsterController
 						+ answerEyes + " eyes, and " + answerArms  + " arms.");
 		System.out.println("It has " + answerNoses + " noses.");
 		
-//		JOptionPane.showMessageDialog(null, "Your monster is named " + answer + ".");
-//		JOptionPane.showMessageDialog(null, "It has " + answerLegs + " legs, "
-//				+ answerEyes + " eyes, and " + answerArms  + " arms.");
-//		JOptionPane.showMessageDialog(null, "It has " + answerNoses + " noses.");
+		JOptionPane.showMessageDialog(null, "Your monster is named " + answer + ".");
+		JOptionPane.showMessageDialog(null, "It has " + answerLegs + " legs, "
+				+ answerEyes + " eyes, and " + answerArms  + " arms.");
+		JOptionPane.showMessageDialog(null, "It has " + answerNoses + " noses.");
 
 		
 //		if (answerNose1 == false)
