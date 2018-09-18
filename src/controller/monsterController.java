@@ -26,7 +26,7 @@ public class monsterController
 		//use this method instead of System.out.Println("ASDF");
 		
 //		JOptionPane.showMessageDialog(null, myMonster);
-		//-------------------if you want it to be on multiple lines, but \n where the break should be------------------
+		//-------------------if you want it to be on multiple lines, put \n where the break should be------------------
 		
 		
 		
@@ -34,21 +34,117 @@ public class monsterController
 		String userLegCount = JOptionPane.showInputDialog(null, "How many legs does your monster have?");
 		String userEyeCount = JOptionPane.showInputDialog(null, "How many eyes does your monster have?");
 		String userArmCount = JOptionPane.showInputDialog(null, "How many arms does your monster have?");
-		String userNose = JOptionPane.showInputDialog(null, "Does your monster have a nose?");
+		String userNose = JOptionPane.showInputDialog(null, "Does your monster have a nose? (yes/no)");
 		String userNose111 = "yes";
+		String input1 = "1";
+		
+		
 		if (userNose.equals(userNose111)) // == does not work well in Java!! cannot be used with objects such as string!!!!!-----------------------------only primitives (ints, doubles)
 		{
 			String userNose2 = JOptionPane.showInputDialog(null, "How many noses?");
-
-			JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
-					+ userEyeCount + " eyes, and " + userArmCount  + " arms." + "\nIt has " + userNose2 + " noses.") ;
+			if (userLegCount.equals(input1))
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " leg, "
+						+ userEyeCount + " eyes, and " + userArmCount  + " arms." + "\nIt has " + userNose2 + " noses.") ;
+			}
+			
+			//put the ! things on each one!!!
+			if (userEyeCount.equals(input1) && !(userArmCount.equals(input1)) && !(userLegCount.equals(input1)))
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
+						+ userEyeCount + " eye, and " + userArmCount  + " arms." + "\nIt has " + userNose2 + " noses.") ;
+			}
+			if (userArmCount.equals(input1) && !(userLegCount.equals(input1)) && !(userEyeCount.equals(input1)))
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
+						+ userEyeCount + " eyes, and " + userArmCount  + " arm." + "\nIt has " + userNose2 + " noses.") ;
+			}
+		
+			
+			if (!(userLegCount.equals(input1)) && !(userEyeCount.equals(input1)) && !(userArmCount.equals(input1)))  //this is the original
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
+						+ userEyeCount + " eyes, and " + userArmCount  + " arms." + "\nIt has " + userNose2 + " noses.") ;
+			}
+			
+			
+			//----------------combos-------------------------
+			
+			if (userLegCount.equals(input1) && userEyeCount.equals(input1) && !userArmCount.equals(input1)) //1 leg and 1 eye
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " leg, "
+						+ userEyeCount + " eye, and " + userArmCount  + " arms." + "\nIt has " + userNose2 + " noses.") ;
+			}
+			if (userLegCount.equals(input1) && userArmCount.equals(input1) && !userEyeCount.equals(input1)) //1 leg and 1 arm
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " leg, "
+						+ userEyeCount + " eyes, and " + userArmCount  + " arm." + "\nIt has " + userNose2 + " noses.") ;
+			}
+			if (userArmCount.equals(input1) && userEyeCount.equals(input1) && !userLegCount.equals(input1)) //1 eye and 1 arm
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
+						+ userEyeCount + " eye, and " + userArmCount  + " arm." + "\nIt has " + userNose2 + " noses.") ;
+			}
+			if (userLegCount.equals(input1) && userEyeCount.equals(input1) && userArmCount.equals(input1)) //ALL THREE
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " leg, "
+						+ userEyeCount + " eye, and " + userArmCount  + " arm." + "\nIt has " + userNose2 + " noses.") ;
+			}
+			
+			
 			
 			
 		}
 		else
 		{
-			JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
-					+ userEyeCount + " eyes, and " + userArmCount  + " arms."+ "\nIt does not have a nose.");
+			if (userLegCount.equals(input1) && !(userEyeCount.equals(input1)) && !(userArmCount.equals(input1)))
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " leg, "
+						+ userEyeCount + " eyes, and " + userArmCount  + " arms."+ "\nIt does not have a nose.");
+			}
+			if (userEyeCount.equals(input1) && !(userLegCount.equals(input1)) && !(userArmCount.equals(input1)))
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
+						+ userEyeCount + " eye, and " + userArmCount  + " arms."+ "\nIt does not have a nose.");
+			}
+			if (userArmCount.equals(input1) && !(userEyeCount.equals(input1)) && !(userLegCount.equals(input1)))
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
+						+ userEyeCount + " eyes, and " + userArmCount  + " arm."+ "\nIt does not have a nose.");
+			}
+			if (!(userLegCount.equals(input1)) && !(userEyeCount.equals(input1)) && !(userArmCount.equals(input1))) //original
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
+						+ userEyeCount + " eyes, and " + userArmCount  + " arms."+ "\nIt does not have a nose.");
+			}
+			
+			
+			//----------------combos-------------------------
+			if (userLegCount.equals(input1) && userEyeCount.equals(input1) && !userArmCount.equals(input1)) //1 leg and 1 eye
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " leg, "
+						+ userEyeCount + " eye, and " + userArmCount  + " arms."+ "\nIt does not have a nose.");
+			}
+			if (userLegCount.equals(input1) && userArmCount.equals(input1)&& !userEyeCount.equals(input1)) //1 leg and 1 arm
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " leg, "
+						+ userEyeCount + " eyes, and " + userArmCount  + " arm."+ "\nIt does not have a nose.");
+			}
+			if (userArmCount.equals(input1) && userEyeCount.equals(input1) && !userLegCount.equals(input1)) //1 arm and 1 eye
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " legs, "
+						+ userEyeCount + " eye, and " + userArmCount  + " arm."+ "\nIt does not have a nose.");
+			}
+			if (userLegCount.equals(input1) && userEyeCount.equals(input1) && userArmCount.equals(input1)) //1 leg and 1 eye and 1 arm
+			{
+				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " leg, "
+						+ userEyeCount + " eye, and " + userArmCount  + " arm."+ "\nIt does not have a nose.");
+			}
+
+			
+			//make it so it only pops up 1 message instead of doing it all!!!!!!!! And fix the nose/noses with if statements
+			
+			
 		}
 
 		
