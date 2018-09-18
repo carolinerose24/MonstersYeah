@@ -42,6 +42,9 @@ public class monsterController
 		if (userNose.equals(userNose111)) // == does not work well in Java!! cannot be used with objects such as string!!!!!-----------------------------only primitives (ints, doubles)
 		{
 			String userNose2 = JOptionPane.showInputDialog(null, "How many noses?");
+			
+			//make another large if statement that change noses to nose OR make it display after? put rest in an else
+			
 			if (userLegCount.equals(input1))
 			{
 				JOptionPane.showMessageDialog(null, "Your monster is named " + nameOfMonster + "." + "\nIt has " + userLegCount + " leg, "
