@@ -251,7 +251,7 @@ public class monsterController
 		}
 		catch(NumberFormatException error)
 		{
-			JOptionPane.showMessageDialog(null, "Put in an double");
+			JOptionPane.showMessageDialog(null, "Put in a double");
 		}
 		return isValid;
 	}
